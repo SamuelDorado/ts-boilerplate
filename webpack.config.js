@@ -5,7 +5,7 @@ const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode: env,
-  entry: './src/index.tsx',
+  entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js',
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.ts?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -32,7 +32,6 @@ module.exports = {
                   },
                 },
               ],
-              '@babel/react',
               '@babel/typescript',
             ],
             plugins: [
@@ -52,7 +51,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.css'],
+    extensions: ['.ts', '.js', '.css'],
   },
   devtool: 'source-map',
   devServer: {

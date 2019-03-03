@@ -2,16 +2,12 @@
     "defaultSeverity": "error",
     "extends": [
       "tslint:recommended",
-      "tslint-config-airbnb",
-      "tslint-react",
       "tslint-config-prettier"
     ],
     "rulesDirectory": ["tslint-plugin-prettier"],
     "rules": {
       "prettier": true,
       "no-any": false,
-      "jsx-no-multiline-js": false,
-      "jsx-no-lambda": false,
       "interface-name": [true, "never-prefix"],
       "variable-name": [true, "allow-pascal-case"],
       "import-name": false,
